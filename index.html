@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Muji Rahman</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <div class="logo">Muji Rahman Sayuti</div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Abaut</a></li>
+                <li><a href="">project</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <section class="jumbo">
+            <img src="/img/2.png" alt="My Profile Foto">
+            <h3>Web Developer | Youtuber | Freelancer</h3>
+        </section>
+
+    </div>
+
+
+
+
+    <script>
+        const slide = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('nav ul');
+
+        slide.addEventListener('click', function () {
+            nav.classList.toggle('slide');
+        });
+    </script>
+</body>
+
+</html>

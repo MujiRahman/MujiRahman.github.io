@@ -6,22 +6,23 @@ body {
 
 .container {
 	display: grid;
-	gap: 10px;
 }
 
 /* bagian navigasi */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	overflow-y: hidden;
+	/* overflow-y: hidden; */
 }
 
 nav {
 	display: flex;
 	justify-content: space-around;
-	background-color: rgb(27, 65, 190);
+	background-color: #222;
 	height: 50px;
 	align-items: center;
 	color: cornsilk;
+	position: fixed;
+	width: 100%;
 }
 
 nav ul {
@@ -119,7 +120,7 @@ nav ul li a:hover {
 		justify-content: space-evenly;
 		flex-direction: column;
 		align-items: center;
-		background-color: rgba(27, 65, 190);
+		background-color: #222;
 		z-index: -1;
 		transform: translateY(-100%);
 		transition: all 1s;
@@ -135,8 +136,154 @@ nav ul li a:hover {
 /* awal dari jumbotron */
 
 .jumbo {
+	height: 500px;
 	display: grid;
-	background-image: url(/big/1.jpg);
+	background-image: url(/img/h.png);
+	background-size: 100%;
+	background-position: center;
+	background-attachment: fixed;
+	color: rgb(255, 255, 255);
 	justify-content: center;
 	align-items: center;
+}
+
+.jumbo img {
+	border-radius: 50%;
+	width: 200px;
+	border: 5px solid #ddd;
+	margin: 0px auto;
+	text-align: center;
+
+}
+
+.jumbo h1 {
+	color: rgba(255, 255, 255, .8);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	font-size: 36px;
+	margin-top: -40px;
+	margin-bottom: 10px;
+	font-family: inherit;
+	font-weight: 500;
+	text-align: center;
+}
+
+.jumbo p {
+	text-align: center;
+	margin-bottom: 15px;
+	font-size: 21px;
+	font-weight: 200;
+	color: rgba(255, 255, 255, .8);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	margin-top: -150px;
+}
+
+/* awal about */
+.about {
+	display: grid;
+	grid-template-areas:
+		'tulisan tulisan'
+		'baris baris'
+		'bagian1 bagian2';
+	gap: 15px;
+	margin-top: 25px;
+}
+
+.about .tulisan {
+	grid-area: tulisan;
+	text-align: center;
+	margin-bottom: -20px;
+}
+
+.about hr {
+	grid-area: baris;
+	width: 250px;
+	border-top: 3px solid #666666;
+}
+
+.about .bagian1 {
+	grid-area: bagian1;
+}
+
+.about .bagian2 {
+	grid-area: bagian2;
+}
+
+/* project services*/
+.services {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	grid-template-areas:
+		'project project project'
+		'baris1 baris1 baris1'
+		'toko film game';
+	gap: 15px;
+	margin-top: 25px;
+}
+
+.services .serv {
+	grid-area: project;
+	text-align: center;
+	margin-bottom: -15px;
+}
+
+.services hr {
+	grid-area: baris1;
+	width: 250px;
+	border-top: 3px solid #666666;
+}
+
+.services .satu {
+	grid-area: toko;
+	background-color: white;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid #aaaaaa;
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	/* display: flex; */
+	/* max-width: 200px; */
+}
+
+.services .dua {
+	grid-area: film;
+	background-color: white;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid #aaaaaa;
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	/* display: flex; */
+	/* max-width: 200px; */
+}
+
+.services .tiga {
+	grid-area: game;
+	background-color: white;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid #aaaaaa;
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	/* display: flex; */
+	/* max-width: 200px; */
+}
+
+.service img {
+	/* display: block; */
+	width: 100px;
+	height: 100px;
+	justify-content: center;
+	/* align-content: center; */
+	border-radius: 50%;
+}
+
+.service h3 {
+	font-size: 1.5em;
+}
+
+.services p {
+	font-weight: 200;
+	letter-spacing: 1px;
+	font-size: 0.8em;
 }

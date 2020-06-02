@@ -1,7 +1,13 @@
 html,
-body {
+body,
+ul,
+li {
 	margin: 0;
 	padding: 0;
+}
+
+img {
+	width: 100%;
 }
 
 .container {
@@ -11,7 +17,9 @@ body {
 /* bagian navigasi */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	/* overflow-y: hidden; */
+	font-size: 18px;
+	margin-bottom: 100px;
+	/* overflow-x: hidden; */
 }
 
 nav {
@@ -145,6 +153,7 @@ nav ul li a:hover {
 	color: rgb(255, 255, 255);
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 100px;
 }
 
 .jumbo img {
@@ -186,6 +195,7 @@ nav ul li a:hover {
 		'bagian1 bagian2';
 	gap: 15px;
 	margin-top: 25px;
+	margin-bottom: 125px;
 }
 
 .about .tulisan {
@@ -209,64 +219,49 @@ nav ul li a:hover {
 }
 
 /* project services*/
+/* services */
 .services {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	/* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
 	gap: 20px;
-	grid-template-areas:
-		'project project project'
-		'baris1 baris1 baris1'
-		'toko film game';
-	gap: 15px;
-	margin-top: 25px;
+	/* place-content: center; */
+	margin-bottom: 125px;
+	margin: 50px;
+
 }
 
-.services .serv {
-	grid-area: project;
-	text-align: center;
-	margin-bottom: -15px;
+.project {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 50px;
+	margin: auto;
+	margin-bottom: 125px;
+	width: 80%;
 }
 
 .services hr {
-	grid-area: baris1;
+	grid-column: 1/-1;
+	text-align: center;
+	margin-bottom: 20px;
 	width: 250px;
 	border-top: 3px solid #666666;
 }
 
-.services .satu {
-	grid-area: toko;
-	background-color: white;
-	padding: 15px;
+.services h2 {
+	grid-column: 1/-1;
 	text-align: center;
-	border: 1px solid #aaaaaa;
-	border-radius: 3px;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-	/* display: flex; */
-	/* max-width: 200px; */
+	margin-bottom: 20px;
 }
 
-.services .dua {
-	grid-area: film;
+.service {
+	/* place-content: center; */
 	background-color: white;
 	padding: 15px;
 	text-align: center;
 	border: 1px solid #aaaaaa;
 	border-radius: 3px;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-	/* display: flex; */
-	/* max-width: 200px; */
-}
-
-.services .tiga {
-	grid-area: game;
-	background-color: white;
-	padding: 15px;
-	text-align: center;
-	border: 1px solid #aaaaaa;
-	border-radius: 3px;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-	/* display: flex; */
-	/* max-width: 200px; */
 }
 
 .service img {
@@ -286,4 +281,42 @@ nav ul li a:hover {
 	font-weight: 200;
 	letter-spacing: 1px;
 	font-size: 0.8em;
+}
+
+/* Gallery */
+.gallery {
+	margin-top: 100px;
+	display: grid;
+	gap: 5px;
+	margin: 50px;
+	margin-bottom: 125px;
+}
+
+.gall {
+	list-style: none;
+	width: 80%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 50px;
+}
+
+.gall img {
+	display: block;
+	border: 3px solid white;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.gallery hr {
+	grid-column: 1/-1;
+	text-align: center;
+	margin-bottom: 20px;
+	width: 250px;
+	border-top: 3px solid #666666;
+}
+
+.gallery h2 {
+	grid-column: 1/-1;
+	text-align: center;
+	margin-bottom: 20px;
 }

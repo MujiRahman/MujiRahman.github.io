@@ -18,24 +18,27 @@ img {
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
-	margin-bottom: 100px;
+	/* margin-bottom: 100px; */
 	/* overflow-x: hidden; */
 }
 
 nav {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	background-color: #222;
-	height: 50px;
+	min-height: 50px;
 	align-items: center;
 	color: cornsilk;
 	position: fixed;
 	width: 100%;
+	padding: 5px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 nav ul {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	width: 40%;
 	list-style: none;
 }
@@ -111,6 +114,12 @@ nav ul li a:hover {
 	nav ul {
 		width: 50%;
 	}
+
+	.about .paragraf {
+		padding: 20px;
+		box-sizing: border-box;
+		display: block;
+	}
 }
 
 /* ukuran mobile */
@@ -139,6 +148,12 @@ nav ul li a:hover {
 		opacity: 1;
 		transform: translateY(0);
 	}
+
+	.about .paragraf {
+		padding: 20px;
+		box-sizing: border-box;
+		display: block;
+	}
 }
 
 /* awal dari jumbotron */
@@ -153,15 +168,15 @@ nav ul li a:hover {
 	color: rgb(255, 255, 255);
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 
 .jumbo img {
 	border-radius: 50%;
 	width: 200px;
 	border: 5px solid #ddd;
-	margin: 0px auto;
-	text-align: center;
+	margin: 70px auto;
+	/* text-align: center; */
 
 }
 
@@ -169,7 +184,7 @@ nav ul li a:hover {
 	color: rgba(255, 255, 255, .8);
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 	font-size: 36px;
-	margin-top: -40px;
+	margin-top: -110px;
 	margin-bottom: 10px;
 	font-family: inherit;
 	font-weight: 500;
@@ -183,39 +198,30 @@ nav ul li a:hover {
 	font-weight: 200;
 	color: rgba(255, 255, 255, .8);
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-	margin-top: -150px;
+	margin-top: -130px;
 }
 
 /* awal about */
 .about {
 	display: grid;
-	grid-template-areas:
-		'tulisan tulisan'
-		'baris baris'
-		'bagian1 bagian2';
 	gap: 15px;
-	margin-top: 25px;
+	/* margin-top: 25px; */
 	margin-bottom: 125px;
 }
 
-.about .tulisan {
-	grid-area: tulisan;
-	text-align: center;
-	margin-bottom: -20px;
+.paragraf {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px;
+	/* box-sizing: border-box; */
 }
 
-.about hr {
-	grid-area: baris;
-	width: 250px;
-	border-top: 3px solid #666666;
-}
-
-.about .bagian1 {
-	grid-area: bagian1;
-}
-
-.about .bagian2 {
-	grid-area: bagian2;
+.bagian1,
+.bagian2 {
+	margin-left: 50px;
+	margin-right: 50px;
+	padding: 5px;
+	box-sizing: border-box;
 }
 
 /* project services*/
@@ -240,19 +246,6 @@ nav ul li a:hover {
 	width: 80%;
 }
 
-.services hr {
-	grid-column: 1/-1;
-	text-align: center;
-	margin-bottom: 20px;
-	width: 250px;
-	border-top: 3px solid #666666;
-}
-
-.services h2 {
-	grid-column: 1/-1;
-	text-align: center;
-	margin-bottom: 20px;
-}
 
 .service {
 	/* place-content: center; */
@@ -307,7 +300,10 @@ nav ul li a:hover {
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.gallery hr {
+.gallery hr,
+.contact hr,
+.services hr,
+.about hr {
 	grid-column: 1/-1;
 	text-align: center;
 	margin-bottom: 20px;
@@ -315,8 +311,100 @@ nav ul li a:hover {
 	border-top: 3px solid #666666;
 }
 
-.gallery h2 {
+.gallery h2,
+.contact h2,
+.services h2,
+.about h2 {
 	grid-column: 1/-1;
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
+}
+
+.contact {
+	margin-top: 100px;
+	display: grid;
+	gap: 5px;
+	margin: 50px;
+	margin-bottom: 125px;
+}
+
+.contact form {
+	display: grid;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.contact form input,
+.contact .pilih {
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
+.contact form textarea {
+	height: 200px;
+	padding: 6px 12px;
+	font-size: x-large;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+}
+
+button {
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	padding: 6px 12px;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	width: 120px;
+	height: 40px;
+}
+
+/* bagian kaki */
+
+footer {
+	width: 100%;
+	background-color: #333;
+	color: #ddd;
+	text-align: center;
+	padding: 10px;
+	padding-bottom: 25px;
+	box-sizing: border-box;
+	font-size: 0.8em;
+}
+
+footer a {
+	text-decoration: none;
+	color: #337ab7;
+}
+
+footer a.youtube {
+	color: #fff;
+	background-color: #d9534f;
+	padding: 8px;
+	border-radius: 4px;
+	/* margin-bottom: 25px; */
 }

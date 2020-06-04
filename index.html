@@ -9,15 +9,15 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="Home">
         <nav class="navigation">
-            <div class="logo">Muji Rahman Sayuti</div>
+            <div>Muji Rahman Sayuti</div>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Abaut</a></li>
-                <li><a href="">project</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">project</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </ul>
             <div class="menu-toggle">
                 <input type="checkbox">
@@ -33,7 +33,7 @@
             <p>Web Developer | Youtuber | Freelancer</p>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <h2>About</h2>
             <hr>
             <div class="paragraf">
@@ -46,7 +46,7 @@
             </div>
         </section>
 
-        <section class="services">
+        <section class="services" id="project">
             <h2 class="serv">My Project</h2>
             <hr>
             <div class="project">
@@ -71,22 +71,22 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="Gallery">
             <h2>Gallery</h2>
             <hr>
             <ul class="gall">
-                <li><img src="img/7.png" alt=""></li>
-                <li><img src="img/8.png" alt=""></li>
-                <li><img src="img/3.png" alt=""></li>
-                <li><img src="img/4.png" alt=""></li>
-                <li> <img src="img/5.png" alt=""></li>
-                <li><img src="img/6.png" alt=""></li>
-                <li><img src="img/4.png" alt=""></li>
-                <li> <img src="img/5.png" alt=""></li>
+                <li><img src="big/3.jpg" alt=""></li>
+                <li><img src="big/4.jpg" alt=""></li>
+                <li><img src="big/5.jpg" alt=""></li>
+                <li><img src="big/6.jpg" alt=""></li>
+                <li><img src="big/7.jpg" alt=""></li>
+                <li><img src="big/7.png" alt=""></li>
+                <li><img src="big/8.jpg" alt=""></li>
+                <li><img src="big/5.jpg" alt=""></li>
             </ul>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="Contact">
             <h2>Contact</h2>
             <hr>
             <form>
@@ -115,14 +115,7 @@
 
     </div>
 
-    <script>
-        const slide = document.querySelector('.menu-toggle input');
-        const nav = document.querySelector('nav ul');
-
-        slide.addEventListener('click', function () {
-            nav.classList.toggle('slide');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

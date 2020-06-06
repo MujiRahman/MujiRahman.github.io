@@ -108,7 +108,7 @@ nav ul li a:hover {
 /* responsive breakpoint */
 
 /* ukuran tablet */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 680px) {
 	nav ul {
 		width: 50%;
 		padding-right: 30px;
@@ -164,7 +164,7 @@ nav ul li a:hover {
 
 	.container .jumbo {
 		background-position: top;
-		/* background-image: url(img/11.png); */
+		background-image: url(img/13.png);
 	}
 }
 
@@ -221,6 +221,10 @@ nav ul li a:hover {
 	display: flex;
 	justify-content: space-evenly;
 	padding: 20px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 16px;
+	line-height: 25px;
+	text-indent: 35px;
 }
 
 .bagian1,
